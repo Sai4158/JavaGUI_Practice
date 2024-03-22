@@ -14,7 +14,7 @@ public class FirstGUI extends JFrame {
 	
 	 public FirstGUI() {
 		 //WINDOW title
-		 super("Sai Rangineei");
+		 super("Sai");
 		 abc();
 	 }
 	 
