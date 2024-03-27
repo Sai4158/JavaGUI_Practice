@@ -55,7 +55,7 @@ class AddSub extends JFrame implements ActionListener{
 		int num1 = Integer.parseInt(t1.getText());
 		int num2 = Integer.parseInt(t2.getText());
 		
-		//logical
+		//logic
 		int value = 0;
 		
 		if(ae.getSource()==b1) 
