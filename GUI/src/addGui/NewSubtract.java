@@ -10,57 +10,51 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
-// this will add 2 numbers in the text field
+// this will subtract 2 numbers 
 
-public class AddGui {
+public class NewSubtract {
 	public static void main(String[] args) {
 
-		Addition obj = new Addition();
+		sub obj = new sub();
 	}
 	
 }
 
-class Addition extends JFrame implements ActionListener {
+class sub extends JFrame implements ActionListener {
 	//create the buttons
-	JTextField t1, t2;
+	JTextField g1, g2;
 	JButton b;
 	Label L1;
 	
-	public Addition()  {
-		super("Sai");
+	public sub()  {
+		super("SUBTRACTION");
 		//text area, 20 is the text field size 
-		 t1 =  new JTextField(20);
-		 t2 =  new JTextField(20);
-		
-		//button
+		 g1 =  new JTextField(20);
+		 g2 =  new JTextField(20);
 		 b = new JButton("ok");
-		
-		//label
 		 L1 =  new Label("Result");
 		
 		//will add them
-		add(t1);
-		add(t2);
+		add(g1);
+		add(g2);
 		add(b);
 		add(L1);
-		
-	
 		
 		b.addActionListener(this);
 		
 		// stuff
 		setLayout(new FlowLayout());
-		setSize(400,400);
+		setSize(900,800);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}	
 	
 	public void actionPerformed(ActionEvent ae) {
-		int num1 = Integer.parseInt(t1.getText());
-		int num2 = Integer.parseInt(t2.getText());
+		int num1 = Integer.parseInt(g1.getText());
+		int num2 = Integer.parseInt(g2.getText());
 		
-		int value = num1 + num2;
+		int value = num1 - num2;
 		L1.setText(value + " ");
 		
 	}
