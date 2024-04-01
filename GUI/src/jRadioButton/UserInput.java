@@ -34,8 +34,8 @@ class radioDemo extends JFrame{
 		r2 =  new JRadioButton("Female");
 		l =  new JLabel("Greetings");
 		
-		//this only selects one radio button not both 
-		//by Grouping
+		//this only selects one radio button not both
+		//by Grouping.
 		ButtonGroup bg = new ButtonGroup();
 		bg.add(r1);
 		bg.add(r2);
