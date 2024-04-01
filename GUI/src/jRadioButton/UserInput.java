@@ -33,7 +33,7 @@ class radioDemo extends JFrame{
 		r1 =  new JRadioButton("Male");
 		r2 =  new JRadioButton("Female");
 		l =  new JLabel("Greetings");
-		
+		          
 		//this only selects one radio button not both
 		//by Grouping.    
 		ButtonGroup bg = new ButtonGroup();
@@ -43,7 +43,7 @@ class radioDemo extends JFrame{
 		
 		
 		//the order Matters 
-		//extends Jframe
+		//extends Jframe.
 		add(t1);
 		add(r1);
 		add(r2);
