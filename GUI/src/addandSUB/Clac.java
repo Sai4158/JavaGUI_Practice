@@ -48,10 +48,11 @@ class AddSub extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 	}
+
 	
 	  //import action event
 	  
-	  public void actionPerformed(ActionEvent ae) { int num1 =
+	  public void actionPerformed1(ActionEvent ae) { int num1 =
 	  Integer.parseInt(t1.getText()); int num2 = Integer.parseInt(t2.getText());
 	  
 	  //logic 
@@ -68,4 +69,24 @@ class AddSub extends JFrame implements ActionListener {
 	  }
 	 
 
+
+
+	//import action event
+	public void actionPerformed(ActionEvent ae) {
+		int num1 = Integer.parseInt(t1.getText());
+		int num2 = Integer.parseInt(t2.getText());
+		
+		//logic
+		int value = 0;
+		
+		if(ae.getSource()==b1) 
+			value = num1 + num2;
+		
+		else 
+			value = num1 - num2;
+			
+		
+		l.setText(value + "");
+	}
 }
+
