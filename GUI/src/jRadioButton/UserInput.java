@@ -8,6 +8,7 @@ import java.util.concurrent.Flow;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
@@ -25,6 +26,7 @@ class radioDemo extends JFrame{
 	JButton b;
 	JRadioButton r1,r2;
 	JLabel l;
+	JCheckBox c1, c2;
 	
 	
 	public radioDemo() {
@@ -33,6 +35,11 @@ class radioDemo extends JFrame{
 		r1 =  new JRadioButton("Male");
 		r2 =  new JRadioButton("Female");
 		l =  new JLabel("Greetings");
+		
+		//this for the CheckBox 
+		c1 =  new JCheckBox("Dancing");
+		c2 =  new JCheckBox("Singing");
+		
 		          
 		//this only selects one radio button not both
 		//by Grouping.    
@@ -41,12 +48,13 @@ class radioDemo extends JFrame{
 		bg.add(r2);
 		
 		
-		
 		//the order Matters 
-		//extends Jframe.
+		//extends JFrame.
 		add(t1);
 		add(r1);
 		add(r2);
+		add(c1);
+		add(c2);
 		add(b);
 		add(l);
 		
@@ -69,10 +77,17 @@ class radioDemo extends JFrame{
 					name = "Ms. " + name;
 				}
 				
+				
+				if(c1.isSelected()) {
+					name = name + " Dancer";
+				}
+				if(c2.isSelected()) {
+					name = name + " Singer";
+				}
+				
 				//will display the name on the panel 
 				l.setText(name);
 			}
-			
 		});
 		
 		
