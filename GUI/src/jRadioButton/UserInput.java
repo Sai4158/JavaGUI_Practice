@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.concurrent.Flow;
 
 import javax.swing.ButtonGroup;
@@ -59,8 +61,17 @@ class radioDemo extends JFrame{
 		add(l);
 		
 		
+		//item listener for check box 
+		c1.addItemListener(new ItemListener() {
+			public void itemStateChanged(ItemEvent e) {
+				//this will print in the console 
+				//not on GUI - SYSOUT 
+				System.out.println("dancer");
+				
+			}
+		});
 		
-		//action listener
+		//action listener for button 
 		b.addActionListener(new ActionListener() {
 			
 			//logic
@@ -86,6 +97,7 @@ class radioDemo extends JFrame{
 				}
 				
 				//will display the name on the panel 
+				//make sure to end it with this
 				l.setText(name);
 			}
 		});
